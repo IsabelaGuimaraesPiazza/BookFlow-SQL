@@ -1,0 +1,9 @@
+-- Atualizações
+UPDATE LIVRO SET Status = 'Emprestado' WHERE ID_Livro = 101;
+UPDATE USUARIO SET Ativo = FALSE WHERE ID_Usuario = 3;
+UPDATE MULTA SET Status = 'Paga' WHERE ID_Multa = 301;
+
+-- Exclusões
+DELETE FROM NOTIFICACAO WHERE ID_Notificacao = 202;
+DELETE FROM EVENTO WHERE ID_Evento = 402;
+DELETE FROM LIVRO WHERE ID_Livro = 103;
