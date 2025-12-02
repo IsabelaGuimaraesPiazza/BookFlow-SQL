@@ -1,0 +1,18 @@
+-- Listar todos os alunos
+SELECT Nome, Email FROM USUARIO WHERE Tipo = 'Aluno';
+
+-- Listar livros disponíveis
+SELECT Titulo, Ano, Editora FROM LIVRO WHERE Status = 'Disponível' ORDER BY Ano DESC;
+
+-- Buscar empréstimos com JOIN
+SELECT U.Nome, L.Titulo, E.Data_Emprestimo, E.Status
+FROM EMPRESTIMO E
+JOIN USUARIO U ON E.ID_Usuario = U.ID_Usuario
+JOIN ITEM_EMPRESTIMO IE ON E.ID_Emprestimo = IE.ID_Emprestimo
+JOIN LIVRO L ON IE.ID_Livro = L.ID_Livro;
+
+-- Consultar multas pendentes
+SELECT U.Nome, M.Valor, M.Data_Registro
+FROM MULTA M
+JOIN USUARIO U ON M.ID_Usuario = U.ID_Usuario
+WHERE M.Status = 'Pendente';
