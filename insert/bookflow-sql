@@ -1,0 +1,79 @@
+-- Inserindo usuários
+INSERT INTO USUARIO (ID_Usuario, Nome, Email, Tipo, Ativo) VALUES
+(1, 'Ana Souza', 'ana@email.com', 'Aluno', TRUE),
+(2, 'Carlos Lima', 'carlos@email.com', 'Professor', TRUE),
+(3, 'Mariana Silva', 'mariana@email.com', 'Aluno', TRUE);
+
+-- Inserindo autores
+INSERT INTO AUTOR (ID_Autor, Nome, Nacionalidade) VALUES
+(1, 'José Almeida', 'Brasileiro'),
+(2, 'Laura Torres', 'Portuguesa');
+
+-- Inserindo categorias
+INSERT INTO CATEGORIA (ID_Categoria, Nome) VALUES
+(1, 'Tecnologia'),
+(2, 'Literatura');
+
+-- Inserindo livros
+INSERT INTO LIVRO (ID_Livro, Titulo, Ano, Editora, Status) VALUES
+(101, 'Banco de Dados', 2022, 'Editora ABC', 'Disponível'),
+(102, 'Redes de Computadores', 2021, 'Editora XYZ', 'Disponível'),
+(103, 'Dom Casmurro', 1899, 'Editora Clássicos', 'Disponível');
+
+-- Inserindo empréstimos
+INSERT INTO EMPRESTIMO (ID_Emprestimo, ID_Usuario, Data_Emprestimo, Data_Devolucao_Prevista, Status) VALUES
+(1001, 1, '2025-11-01', '2025-11-15', 'Em andamento'),
+(1002, 2, '2025-11-05', '2025-11-20', 'Devolvido');
+
+-- Inserindo notificações
+INSERT INTO NOTIFICACAO (ID_Notificacao, ID_Emprestimo, Data, Tipo) VALUES
+(201, 1001, '2025-11-10', 'Lembrete de devolução'),
+(202, 1002, '2025-11-18', 'Devolução confirmada');
+
+-- Inserindo multas
+INSERT INTO MULTA (ID_Multa, ID_Usuario, Valor, Data_Registro, Status) VALUES
+(301, 1, 10.00, '2025-11-20', 'Pendente');
+
+-- Inserindo eventos
+INSERT INTO EVENTO (ID_Evento, Titulo, Descricao, Data, Local) VALUES
+(401, 'Palestra sobre IA', 'Discussão sobre Inteligência Artificial', '2025-12-10', 'Auditório Principal'),
+(402, 'Roda de Leitura', 'Leitura de clássicos brasileiros', '2025-12-15', 'Sala 2');-- Inserindo usuários
+INSERT INTO USUARIO (ID_Usuario, Nome, Email, Tipo, Ativo) VALUES
+(1, 'Ana Souza', 'ana@email.com', 'Aluno', TRUE),
+(2, 'Carlos Lima', 'carlos@email.com', 'Professor', TRUE),
+(3, 'Mariana Silva', 'mariana@email.com', 'Aluno', TRUE);
+
+-- Inserindo autores
+INSERT INTO AUTOR (ID_Autor, Nome, Nacionalidade) VALUES
+(1, 'José Almeida', 'Brasileiro'),
+(2, 'Laura Torres', 'Portuguesa');
+
+-- Inserindo categorias
+INSERT INTO CATEGORIA (ID_Categoria, Nome) VALUES
+(1, 'Tecnologia'),
+(2, 'Literatura');
+
+-- Inserindo livros
+INSERT INTO LIVRO (ID_Livro, Titulo, Ano, Editora, Status) VALUES
+(101, 'Banco de Dados', 2022, 'Editora ABC', 'Disponível'),
+(102, 'Redes de Computadores', 2021, 'Editora XYZ', 'Disponível'),
+(103, 'Dom Casmurro', 1899, 'Editora Clássicos', 'Disponível');
+
+-- Inserindo empréstimos
+INSERT INTO EMPRESTIMO (ID_Emprestimo, ID_Usuario, Data_Emprestimo, Data_Devolucao_Prevista, Status) VALUES
+(1001, 1, '2025-11-01', '2025-11-15', 'Em andamento'),
+(1002, 2, '2025-11-05', '2025-11-20', 'Devolvido');
+
+-- Inserindo notificações
+INSERT INTO NOTIFICACAO (ID_Notificacao, ID_Emprestimo, Data, Tipo) VALUES
+(201, 1001, '2025-11-10', 'Lembrete de devolução'),
+(202, 1002, '2025-11-18', 'Devolução confirmada');
+
+-- Inserindo multas
+INSERT INTO MULTA (ID_Multa, ID_Usuario, Valor, Data_Registro, Status) VALUES
+(301, 1, 10.00, '2025-11-20', 'Pendente');
+
+-- Inserindo eventos
+INSERT INTO EVENTO (ID_Evento, Titulo, Descricao, Data, Local) VALUES
+(401, 'Palestra sobre IA', 'Discussão sobre Inteligência Artificial', '2025-12-10', 'Auditório Principal'),
+(402, 'Roda de Leitura', 'Leitura de clássicos brasileiros', '2025-12-15', 'Sala 2');
