@@ -16,3 +16,4 @@ SELECT U.Nome, M.Valor, M.Data_Registro
 FROM MULTA M
 JOIN USUARIO U ON M.ID_Usuario = U.ID_Usuario
 WHERE M.Status = 'Pendente';
+ 
