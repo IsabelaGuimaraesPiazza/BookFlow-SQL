@@ -12,7 +12,7 @@ INSERT INTO AUTOR (ID_Autor, Nome, Nacionalidade) VALUES
 -- Inserindo categorias
 INSERT INTO CATEGORIA (ID_Categoria, Nome) VALUES
 (1, 'Tecnologia'),
-(2, 'Literatura');
+(2, 'Literatura'); 
 
 -- Inserindo livros
 INSERT INTO LIVRO (ID_Livro, Titulo, Ano, Editora, Status) VALUES
