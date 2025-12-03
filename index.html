@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>BookFlow - Scripts SQL</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    pre {
+      background: #eee;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h1>📚 BookFlow – Sistema de Gerenciamento de Biblioteca Acadêmica</h1>
+  <p>Este projeto simula um sistema de biblioteca acadêmica com controle de usuários, livros, autores, categorias, empréstimos, notificações, multas e eventos.</p>
+
+  <section>
+    <h2>insert_bookflow.sql</h2>
+    <pre>
+-- Inserindo usuários
+INSERT INTO USUARIO (ID_Usuario, Nome, Email, Tipo, Ativo) VALUES
+(1, 'Ana Souza', 'ana@email.com', 'Aluno', TRUE),
+(2, 'Carlos Lima', 'carlos@email.com', 'Professor', TRUE),
+(3, 'Mariana Silva', 'mariana@email.com', 'Aluno', TRUE);
+
+-- Inserindo autores
+INSERT INTO AUTOR (ID_Autor, Nome, Nacionalidade) VALUES
+(1, 'José Almeida', 'Brasileiro'),
+(2, 'Laura Torres', 'Portuguesa');
+    </pre>
+  </section>
+
+  <section>
+    <h2>select_bookflow.sql</h2>
+    <pre>
+-- Listar todos os alunos
+SELECT Nome, Email FROM USUARIO WHERE Tipo = 'Aluno';
+
+-- Listar livros disponíveis
+SELECT Titulo, Ano, Editora FROM LIVRO WHERE Status = 'Disponível' ORDER BY Ano DESC;
+    </pre>
+  </section>
+
+  <section>
+    <h2>update_delete_bookflow.sql</h2>
+    <pre>
+-- Atualizações
+UPDATE LIVRO SET Status = 'Emprestado' WHERE ID_Livro = 101;
+UPDATE USUARIO SET Ativo = FALSE WHERE ID_Usuario = 3;
+
+-- Exclusões
+DELETE FROM NOTIFICACAO WHERE ID_Notificacao = 202;
+DELETE FROM EVENTO WHERE ID_Evento = 402;
+    </pre>
+  </section>
+</body>
+</html>
